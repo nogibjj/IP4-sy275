@@ -11069,10 +11069,11 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("assetsad.jpg");
+  /*background-image: url("/static/assets/img/bg.png");*/
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #242121 100%), url("/static/assets/img/bg.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
 }
 .masthead h1, .masthead .h1 {
@@ -11080,7 +11081,8 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(255, 108, 0, 0.9), rgba(207, 64, 64, 0.9));
+  /*background: linear-gradient(rgba(1, 33, 105, 0.9), rgba(1, 33, 105, 0.5));*/
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;

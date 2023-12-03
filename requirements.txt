@@ -13,5 +13,5 @@ flask
 openai==0.28
 flask_bootstrap
 python-dotenv
-
+gunicorn
 

@@ -29,33 +29,49 @@
                         <label for="userInput" class="text-white">Type your question:</label>
                         <textarea class="form-control" name="user_input" id="userInput" rows="1"></textarea>
                     </div>
-                    <button class="btn btn-primary" type="submit">Send</button>
+                    <button class="btn btn-primary" type="submit">Ask</button>
                 </form>
             </div>
             <div class="col-md-1"></div>
-            <!-- Chat Display -->
-            <div class="chat-display col-md-6">
-                {% for message in conversation %}
-                <div class="message text-left">
-                    {% if message.assistant %}
-                    <div class="assistant-message text-white">
-                        <strong>{{ message.time }} - Assistant:</strong> {{ message.assistant }}
+            <!-- Chat Display Inside a Card -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Chat History
                     </div>
-                    {% elif message.user %}
-                    <div class="user-message text-white">
-                        <strong>{{ message.time }} - You:</strong> {{ message.user }}
+                    <div class="card-body overflow-auto" style="max-height: 500px;">
+                        {% for message in conversation %}
+                        <div class="message text-left">
+                            {% if message.assistant %}
+                            <div class="assistant-message">
+                                <strong>{{ message.time }} - Assistant:</strong> {{ message.assistant }}
+                            </div>
+                            <hr> <!-- Separator -->
+                            {% elif message.user %}
+                            <div class="user-message">
+                                <strong>{{ message.time }} - You:</strong> {{ message.user }}
+                            </div>
+                            {% endif %}
+                        </div>
+                        <br>
+                        {% endfor %}
                     </div>
-                    {% endif %}
                 </div>
-                <hr> <!-- Separator -->
-                {% endfor %}
             </div>
-
         </div>
     </div>
 </header>
 
 {% include 'footer.html' %}
+
+<!-- JavaScript to Scroll to Bottom -->
+<script>
+    window.onload = function() {
+        var chatDisplay = document.querySelector('.card-body');
+        chatDisplay.scrollTop = chatDisplay.scrollHeight;
+    };
+</script>
+
 
 </body>
 </html>
