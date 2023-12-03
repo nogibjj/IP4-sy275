@@ -1,26 +1,19 @@
-"""
-Test goes here
-
-"""
-
-from main import add, subtract, multiply, divide
+import pytest
+from app import app  # import your Flask app
 
 
-def test_add():
-    assert add(1, 2) == 3
+@pytest.fixture
+def client():
+    app.config['TESTING'] = True
+    with app.test_client() as client:
+        with app.app_context():
+            # initialize here if needed
+            pass
+        yield client
 
-def test_subtract():
-    assert subtract(1, 2) == -1
 
-def test_multiply():
-    assert multiply(1, 2) == 2
-
-def test_divide():
-    assert divide(2, 1) == 2
-
-if __name__ == "__main__":
-    test_add()
-    test_subtract()
-    test_multiply()
-    test_divide()
-    print("Everything passed")
+def test_home_page(client):
+    """Test the home page."""
+    response = client.get('/')
+    assert response.status_code == 200
+    assert b"CHAT WITH ME" in response.data
