@@ -4,6 +4,10 @@
 
 ## Summary
 
+[Website Here](https://flaskapp.ambitiouswater-3b3443ba.centralus.azurecontainerapps.io/)
+
+[Youtube Here](https://youtu.be/vAQaL4uKK0k)
+
 This project is a publicly accessible auto-scaling container using Azure App Services and Flask, integrating with OpenAI API to provide a question answering service.
 
 - Backend: Python, Flask. The `app.py` is the main file to run the app.
@@ -63,13 +67,9 @@ When you run az containerapp up with the `--source .` flag, it performs several 
 ![img_1.png](img_1.png)
 
 ### Interaction
-- You could type your query in the input box and click the `Ask` button to get the result.
+- You could type your query in the input box and click the `Send` button to get the result.
 
 ![img_2.png](img_2.png)
-
-## Youtube Demo
-
-// TODO
 
 ## Reference
 
