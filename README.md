@@ -1,5 +1,8 @@
 # Auto Scaling Flask App Using Any Serverless Platform
 
+[![CI](https://github.com/nogibjj/IP4-sy275/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/IP4-sy275/actions/workflows/cicd.yml)
+
+
 > Duke University IDS 706 Individual Project 4
 
 ## Summary
