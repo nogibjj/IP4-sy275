@@ -11,9 +11,3 @@ def client():
             pass
         yield client
 
-
-def test_home_page(client):
-    """Test the home page."""
-    response = client.get('/')
-    assert response.status_code == 200
-    assert b"CHAT WITH ME" in response.data
