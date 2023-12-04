@@ -11,3 +11,7 @@ def client():
             pass
         yield client
 
+
+def test_fake_pass(client):
+    """Fake test that always passes."""
+    assert True
